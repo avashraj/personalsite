@@ -15,7 +15,7 @@ export default function Photography() {
         <div>
             <div className="flex"><HomeButton /></div>
             <div className="flex justify-center"><p className="text-4xl">One of my hobbies is taking pictures,</p></div>
-            <div className="flex justify-center"><h1 className="text-6xl">so heres my photography</h1></div>
+            <div className="flex justify-center"><h1 className="text-4xl">so heres my photography</h1></div>
             <div></div>
         </div>
     );
