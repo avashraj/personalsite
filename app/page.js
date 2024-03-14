@@ -1,21 +1,60 @@
+"use client"
 import Image from "next/image";
 import Homelink from "./components/homepagelink";
-//about me portfolio and photography are buttons to other pages
-/*about me page:
+import Typewriter from 'typewriter-effect';
+import './globals.css'
 
-*/
 export default function Home() {
   return (
-    <div>
-      <div className="flex justify-center"><h1 className="content-center text-9xl">Yooooo</h1></div>
-      <div className="flex justify-center"> <p>my name is avash and I am a student exploring software engineering</p></div>
-      <div className="flex justify-center">
-        <div className="mx-4"><Homelink href = 'about' text = 'about me'/></div>
-        <div className="mx-4"><Homelink href = 'portfolio' text = 'portfolio'/></div>
-        <div className="mx-4"><Homelink href = 'photog' text = 'photography'/></div>  
+
+    <div className="grid grid-cols-12 grid-rows-12 h-screen mx-9 my-5 gap-5">
+
+      <div className="border-4 border-maroon rounded col-start-2 col-end-9 row-start-1 row-end-6 justify-center">
+        <div className="flex justify-center content-center text-7xl m-7 text-maroon">
+          <Typewriter
+            options={{
+              strings: ['heyyyy','helloo','wazaah'],
+              autoStart: true,
+              loop: true,
+              delay: 100,
+              pauseFor: 10000
+            }}
+          />
+        </div>
+      
+        <div className="flex justify-center content-center">
+          <p className="text-2xl text-maroon ">my name is avash and I'm a CS student exploring software engineering</p>
+        </div>
+      
+        
+        <div className="text-2xl text-maroon flex justify-center m-3">
+          <p>you can reach me with these links</p>
+        </div>
+        <div>
+          linkedin
+        </div>
+        <div>
+          github
+        </div>
+        <div>
+          email
+        </div>
+
       </div>
-      <div className="flex justify-center">What I'm Currently working on</div>
-      <div className="flex justify-center"><p>shhhhhh</p></div>
+
+      <div className="border-4 border-maroon rounded col-start-9 col-end-12 row-start-1 row-end-8 flex justify-center items-center">
+        <h1 className="text-3xl text-maroon">my skills</h1>
+        
+      </div>
+      <div className="border-4 border-maroon rounded col-start-2 col-end-9 row-start-6 row-end-12">
+        <div className="flex justify-center items-center h-full">
+          <p className="text-3xl text-maroon">my projects</p>
+        </div>
+      </div>
+      <div className="border-4 border-maroon rounded col-start-9 col-end-12 row-start-8 row-end-12 flex justify-center items-center">
+        <p className="text-3xl text-maroon ">pictures</p>
+      </div>
     </div>
   );
 }
+
