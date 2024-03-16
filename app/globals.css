@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-gray-200;
+body{
+    background-color:  #F8F8FF;
+    
+}
+
+.div-seashell{
+    background-color: white;
 }
 
 @font-face {
@@ -19,3 +24,21 @@ body {
     font-weight: normal;
     font-style: italic;
 }
+
+
+/*
+
+background on top 
+div on bottom
+
+option1
+background-color: #F8F8FF;
+background-color: #FAFAFA;
+
+option2
+
+
+
+
+
+*/
