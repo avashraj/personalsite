@@ -1,13 +1,104 @@
 what do i gotta do still:
 
 make typewriter work at start
-make links work in projects section
+
 make on hover work on both links
-make photo gallery slideshow
-link photo gallery div to full page with all photos
+
 split stuff into components
+    main grid
+        1st box
+            typewriter
+            socials
+        second box
+        third box
+            projects
+        4th box
+            photoslides
+            link to all photos(photogallery)
 optimize website performence
 make it look good on mobile
 
 
 
+new sorta code:
+
+"use client"
+import Typewriter from 'typewriter-effect';
+import { FaLinkedin, FaGithub, FaPython, FaReact, FaGitAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { SiTailwindcss, SiCplusplus } from "react-icons/si";
+import Link from 'next/link';
+import PhotoCarousel from './components/photocarousel';
+
+export default function Home() {
+  const photoList = ['getty.JPG', 'home.JPG', 'mystuff.JPG'];
+
+  return (
+    <div className="grid grid-cols-12 grid-rows-12 h-screen mx-2 sm:mx-9 my-5 gap-4 sm:gap-10">
+      <div className="col-span-12 sm:col-start-2 sm:col-end-9 row-start-1 sm:row-start-1 sm:row-end-6 border-2 border-emerald-600 rounded justify-center div-seashell p-4 sm:p-0">
+        <div className="text-center sm:text-left text-4xl sm:text-7xl m-7 text-emerald-600 font-serif">
+          <Typewriter
+            options={{
+              strings: ['Heyyyy,', 'Helloo,', 'Wazaah,'],
+              loop: true,
+              delay: 100,
+              autoStart: true,
+              pauseFor: 10000
+            }}
+          />
+        </div>
+        <div className="text-lg sm:text-base ml-4 sm:ml-7">
+          <p className="text-emerald-700 font-mono font-bold">My name is Avash Raj Adhikari, and I'm a CS student @ UC Merced exploring software engineering.</p>
+        </div>
+        <div className="mt-4 sm:mt-0 sm:ml-7">
+          <p className="text-emerald-700 font-mono">You can reach me with these links:</p>
+          <div className="flex justify-center sm:justify-start mt-2">
+            <Link className="mx-2" href="https://www.linkedin.com/in/avash-adhikari-514856239/"><FaLinkedin color="#047857" size={40} /></Link>
+            <Link className='className="mx-2"' href="https://github.com/avashraj"><FaGithub color="#047857" size={40} /></Link>
+            <Link className="mx-2" href="mailto:avashraj328@gmail.com?subject=Mail from website"><MdEmail color="#047857" size={40} /></Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-span-12 sm:col-start-9 sm:col-end-12 row-start-2 sm:row-start-1 sm:row-end-8 border-2 border-emerald-600 rounded div-seashell p-4 sm:p-0">
+        <h1 className="text-2xl text-emerald-700 font-mono font-bold ml-4 sm:ml-0">About me:</h1>
+        <p className="text-lg sm:text-base text-emerald-600 font-mono ml-4 sm:ml-0 mt-2">
+          I strive to become a coding wizard who can complete the entire software development process. Currently, my tech skills include:
+        </p>
+        <div className="flex flex-wrap justify-center sm:justify-start ml-4 sm:ml-10 mt-4">
+          <FaPython color="#047857" size={35} className="m-2" />
+          <FaReact color="#047857" size={35} className="m-2" />
+          <FaGitAlt color="#047857" size={35} className="m-2" />
+          <SiTailwindcss color="#047857" size={35} className="m-2" />
+          <SiCplusplus color="#047857" size={35} className="m-2" />
+        </div>
+        <p className="text-lg sm:text-base text-emerald-600 font-mono ml-4 sm:ml-0 mt-4">
+          Other than code, I enjoy playing sports, cooking food, and taking pictures which you can see below.
+        </p>
+      </div>
+
+      <div className="col-span-12 sm:col-start-2 sm:col-end-9 row-start-3 sm:row-start-6 sm:row-end-12 border-2 border-emerald-600 rounded div-seashell p-4 sm:p-0">
+  <h1 className="text-2xl text-emerald-700 font-mono font-bold ml-4 sm:ml-8">My projects:</h1>
+  {/* Placeholder for project content */}
+  <div className="mx-8">
+    <Link href="https://github.com/avashraj/personalsite">
+      
+        <h1 className="font-mono font-bold text-emerald-700">this website:</h1>
+        <p className="font-mono text-emerald-600 ">[built with react, nextjs, tailwindcss and hosted through vercel]</p>
+      
+    </Link>
+  </div>
+  <div className='mx-8'>
+    <h1 className='font-mono font-bold text-emerald-700'>blip</h1>
+    <p className='font-mono text-emerald-600'>[Currently building...]</p>
+  </div>
+  {/* Add more projects as needed */}
+</div>
+
+
+      <div className="col-span-12 sm:col-start-9 sm:col-end-12 row-start-4 sm:row-start-8 sm:row-end-12 border-2 border-emerald-600 rounded div-seashell p-4 sm:p-0 flex justify-center items-center">
+        <Link href="/photog"><PhotoCarousel photoList={photoList} /></Link>
+      </div>
+    </div>
+  );
+}

@@ -1,82 +1,64 @@
 "use client"
 
-import Image from "next/image"
-import Link from "next/link"
+import { useEffect, useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
 
-export default function PhotoGallery(){
-    return(
-        <div>
-            <div className="photos-container">
-                <Image 
-                    src="/enjoy2.JPG"
-                    width={500}
-                    height={400} 
-                    alt='enjoy on stage'
-                    quality={75}/>
-                <Image 
-                    src="/god.JPG"
-                    width={500}
-                    height={400} 
-                    alt='get right with god'
-                    quality={75}/>
-                
-                <Link href= '/'><Image
-                    src="/enjoy1.JPG"
-                    width={500}
-                    height={400} 
-                    alt='enjoy on stage again'
-                    quality={100}/></Link>
-                <Image 
-                    src="/walk.JPG"
-                    width={500}
-                    height={400} 
-                    alt='pretty sunset'
-                    quality={75}/>
-                <Image 
-                    src="/mystuff.JPG"
-                    width={500}
-                    height={400} 
-                    alt='my desk at my parents house'
-                    quality={75}/>
-                <Image 
-                    src="/fren.JPG"
-                    width={500}
-                    height={400} 
-                    alt='my friends on a hike'
-                    quality={75}/>
-                <Image 
-                    src="/getty.JPG"
-                    width={500}
-                    height={400} 
-                    alt='pretty sunset'
-                    quality={75}/>
-                <Image 
-                    src="/home.JPG"
-                    width={500}
-                    height={400} 
-                    alt='my desk at my parents house'
-                    quality={75}/>
-                <Image 
-                    src="/fren2.JPG"
-                    width={500}
-                    height={400} 
-                    alt='my friends on a hike'
-                    quality={75}/>
-            </div>   
-            <style jsx>{`
-                .photos-container {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    grid-gap: 0; 
-                }
+export default function PhotoGallery() {
+  const imageFilenames = [
+    'enjoy2.JPG',
+    'god.JPG',
+    'enjoy1.JPG',
+    'walk.JPG',
+    'mystuff.JPG',
+    'fren.JPG',
+    'getty.JPG',
+    'home.JPG',
+    'fren2.JPG',
+  ];
 
-                /* Mobile devices */
-                @media (max-width: 768px) {
-                    .photos-container {
-                        grid-template-columns: 1fr; 
-                    }
-                }
-            `}</style>
-        </div> 
-    )
+  const [visibleCount, setVisibleCount] = useState(0);
+
+  useEffect(() => {
+    if (visibleCount < imageFilenames.length) {
+      const timer = setTimeout(() => {
+        setVisibleCount(visibleCount + 1);
+      }, 150); // Show next image every 1.5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [visibleCount, imageFilenames.length]);
+
+  return (
+    <div>
+      <div className="photos-container">
+        {imageFilenames.slice(0, visibleCount).map((filename, index) => (
+          <Link href='/' key={index}>
+            
+              <Image 
+                src={`/photos/${filename}`} 
+                width={500} 
+                height={400} 
+                alt={filename.replace('.JPG', '')} 
+                quality={75}
+                layout="intrinsic" />
+            
+          </Link>
+        ))}
+      </div>
+      <style jsx>{`
+        .photos-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 0; 
+        }
+
+        /* Adjustments for mobile screens */
+        @media (max-width: 768px) {
+          .photos-container {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
+    </div>
+  );
 }

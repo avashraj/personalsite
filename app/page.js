@@ -1,4 +1,5 @@
 "use client"
+
 import Typewriter from 'typewriter-effect';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub, FaPython, FaReact, FaGitAlt } from "react-icons/fa6";
@@ -6,10 +7,12 @@ import { MdEmail } from "react-icons/md";
 import { SiTailwindcss, SiCplusplus  } from "react-icons/si";
 import './globals.css';
 import Link from 'next/link';
+import PhotoCarousel from './components/photocarousel';
 
 
 export default function Home() {
   
+  const photoList = ['getty.JPG','home.JPG','mystuff.JPG'];
   return (
     <div className="grid grid-cols-12 grid-rows-12 h-screen mx-9 my-5 gap-10">
       <div className="border-2 border-emerald-600 col-start-2 col-end-9 row-start-1 row-end-6 justify-center div-seashell rounded">
@@ -48,7 +51,8 @@ export default function Home() {
           <div className=''><SiTailwindcss color="#047857" size={35}/></div>
           <div className='animate-bounce'> <SiCplusplus color="#047857" size={35}/> </div>
         </div>
-        <p className="text-1xl text-emerald-600 flext justify-start font-mono ml-3 mt-5">Other than code, I enjoy playing sports, cooking food, and taking pictures which you can see below</p>
+        <p className="text-1xl text-emerald-600 flext justify-start font-mono ml-3 mt-5">Other than code, I enjoy playing sports, cooking food, and taking pictures which you can see below [click box]</p>
+        
       </div>
 
       <div className="border-2 border-emerald-600 rounded col-start-2 col-end-9 row-start-6 row-end-12 flex flex-col div-seashell">
@@ -77,7 +81,7 @@ export default function Home() {
       </div>
 
       <div className="relative border-2 border-emerald-600 rounded col-start-9 col-end-12 row-start-8 row-end-12 flex justify-center items-center div-seashell">
-        
+        <Link href="/photog"><PhotoCarousel className='m-5' photoList={photoList} /> </Link>       
       </div>
     </div>
   );
