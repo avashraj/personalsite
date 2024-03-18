@@ -1,7 +1,6 @@
 what do i gotta do still:
 
 make typewriter work at start
-make links work in home section
 make links work in projects section
 make on hover work on both links
 make photo gallery slideshow

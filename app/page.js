@@ -5,6 +5,7 @@ import { FaGithub, FaPython, FaReact, FaGitAlt } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { SiTailwindcss, SiCplusplus  } from "react-icons/si";
 import './globals.css';
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -31,9 +32,9 @@ export default function Home() {
           <p>you can reach me with these links:</p>
         </div>
         <div className="flex justify-center content-center mt-5">
-        <div className="mx-6"><FaLinkedin color="#047857" size={60} title="Linkedin"/></div>
-        <div className="mx-6"><FaGithub color="#047857" size={60}/></div>
-        <div className="mx-6"><MdEmail color="#047857" size={60}/></div>
+        <div className="mx-6"><Link href= "https://www.linkedin.com/in/avash-adhikari-514856239/"><FaLinkedin color="#047857" size={60} title="Linkedin"/></Link> </div>
+        <div className="mx-6"><Link href = "https://github.com/avashraj"> <FaGithub color="#047857" size={60}/></Link></div>
+        <div className="mx-6"><Link href = "mailto:avashraj328@gmail.com?subject=Mail from website"><MdEmail color="#047857" size={60}/></Link></div>
         </div>
       </div>
 
@@ -53,9 +54,9 @@ export default function Home() {
       <div className="border-2 border-emerald-600 rounded col-start-2 col-end-9 row-start-6 row-end-12 flex flex-col div-seashell">
           <h1 className="text-2xl text-emerald-700 flex justify-start mt-4 ml-8 font-mono font-bold ">my projects:</h1>
           <div className="grid grid-cols-1 gap-4 mt-4">
-            <div className="mx-8">
+            <div className="mx-8"><Link href="https://github.com/avashraj/personalsite">
               <h1 className="font-mono font-bold text-emerald-700">this website:</h1>
-              <p className="font-mono text-emerald-600 ">[built with react, nextjs, tailwindcss and hosted through vercel]</p>
+              <p className="font-mono text-emerald-600 ">[built with react, nextjs, tailwindcss and hosted through vercel]</p></Link>
             </div>
             <div className='mx-8 hover:bg-blue'>
               <h1 className='font-mono font-bold text-emerald-700'>blip</h1>
@@ -76,6 +77,7 @@ export default function Home() {
       </div>
 
       <div className="relative border-2 border-emerald-600 rounded col-start-9 col-end-12 row-start-8 row-end-12 flex justify-center items-center div-seashell">
+        
       </div>
     </div>
   );
