@@ -1,0 +1,14 @@
+what do i gotta do still:
+
+make typewriter work at start
+make links work in home section
+make links work in projects section
+make on hover work on both links
+make photo gallery slideshow
+link photo gallery div to full page with all photos
+split stuff into components
+optimize website performence
+make it look good on mobile
+
+
+

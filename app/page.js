@@ -1,6 +1,4 @@
 "use client"
-//import Image from "next/image";
-//import Homelink from "./components/homepagelink";
 import Typewriter from 'typewriter-effect';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub, FaPython, FaReact, FaGitAlt } from "react-icons/fa6";
@@ -8,17 +6,20 @@ import { MdEmail } from "react-icons/md";
 import { SiTailwindcss, SiCplusplus  } from "react-icons/si";
 import './globals.css';
 
+
 export default function Home() {
+  
   return (
     <div className="grid grid-cols-12 grid-rows-12 h-screen mx-9 my-5 gap-10">
       <div className="border-2 border-emerald-600 col-start-2 col-end-9 row-start-1 row-end-6 justify-center div-seashell rounded">
-        <div className="flex justify-start content-center text-7xl m-7 text-emerald-600 font-mono font-normal">
+        <div className="flex justify-start content-center text-7xl m-7 text-emerald-600 font-serif font-normal">
           <Typewriter
             options={{
               strings: ['Heyyyy,','Helloo,','Wazaah,'],
-              autoStart: true,
+              
               loop: true,
               delay: 100,
+              autoStart: true,
               pauseFor: 10000
             }}
           />
