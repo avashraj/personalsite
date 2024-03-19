@@ -8,6 +8,11 @@ import { SiTailwindcss, SiCplusplus  } from "react-icons/si";
 import './globals.css';
 import Link from 'next/link';
 import PhotoCarousel from './components/photocarousel';
+import dynamic from 'next/dynamic';
+//const Typewriter = dynamic(() => import('typewriter-effect'), { ssr: false });
+//const PhotoCarousel = dynamic(() => import('./components/photocarousel'), { ssr: false });
+
+
 
 
 export default function Home() {
@@ -29,7 +34,7 @@ export default function Home() {
           />
         </div>
         <div className="flex justify-start ml-7 content-center">
-          <p className="text-1xl text-emerald-700 font-mono font-bold">my name is Avash Raj Adhikari and I'm a CS student  @ UC Merced exploring software engineering</p>
+          <p className="text-1xl text-emerald-700 font-mono font-bold">my name is Avash Raj Adhikari and I`&apos;`m a CS student  @ UC Merced exploring software engineering</p>
         </div>
         <div className="text-1xl text-emerald-700 flex justify-start ml-7 align-top font-mono font-semi-bold">
           <p>you can reach me with these links:</p>

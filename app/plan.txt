@@ -1,8 +1,11 @@
 what do i gotta do still:
 
 make typewriter work at start
+    something to do with dom changing cuz nothing where it changes works like photo slides and other typewriter
 
 make on hover work on both links
+    on social links make it lighter color
+    on project links make border show light ass green border prolly change css to make this work
 
 split stuff into components
     main grid
