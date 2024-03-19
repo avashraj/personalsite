@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    background-color:  #F8F8FF;
+    background-color:  #FAFAFA;
     
 }
 
@@ -28,14 +28,11 @@ body{
 
 /*
 
-background on top 
-div on bottom
+
 
 option1
 background-color: #F8F8FF;
 background-color: #FAFAFA;
-
-option2
 
 
 
