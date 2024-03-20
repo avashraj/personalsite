@@ -27,10 +27,10 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="flex justify-start ml-7 content-center">
+        <div className="flex justify-start ml-5 xl:ml-7 content-center">
           <p className="text-1xl text-emerald-700 font-mono font-bold">my name is Avash Raj Adhikari and I&apos;m a CS student  @ UC Merced exploring software engineering</p>
         </div>
-        <div className="text-1xl text-emerald-700 flex justify-start ml-7 align-top font-mono font-semi-bold">
+        <div className="text-1xl ml-5 text-emerald-700 flex justify-start xl:ml-7 align-top font-mono font-semi-bold">
           <p>you can reach me with these links:</p>
         </div>
         <div className="flex justify-center content-center mt-5 mb-3">
@@ -42,7 +42,7 @@ export default function Home() {
 
       <div className="border-2 border-emerald-600 xl:col-start-9 xl:col-end-12 xl:row-start-1 xl:row-end-8 flex flex-col justify-start pt-5 div-seashell rounded">
         <h1 className="text-2xl text-emerald-700 flex justify-start mb-2 mt-2 ml-3 font-mono font-bold">about me:</h1>
-        <p className="text-1xl text-emerald-600 flext justify-start font-mono ml-4"> I strive to become a coding wizard who can complete the entire software development process. Currently my tech skills include: </p>
+        <p className="text-1xl text-emerald-600 flext justify-start font-mono xl:ml-4 m-3"> I strive to become a coding wizard who can complete the entire software development process. Currently my tech skills include: </p>
         <div className="grid grid-cols-3 gap-4 mt-5 ml-10">
           <div className='animate-bounce'><FaPython color="#047857" size={35}/></div>
           <div className=''> <FaReact color="#047857" size={35}/></div>
@@ -50,21 +50,21 @@ export default function Home() {
           <div className=''><SiTailwindcss color="#047857" size={35}/></div>
           <div className='animate-bounce'> <SiCplusplus color="#047857" size={35}/> </div>
         </div>
-        <p className="text-1xl text-emerald-600 flex justify-start font-mono ml-4 mt-3">Other than code, I enjoy playing sports, cooking food, and taking pictures which you can see below [click box]</p>
+        <p className="text-1xl text-emerald-600 flex justify-start font-mono ml-4 mt-3 mb-2 xl:mb-0">Other than code, I enjoy playing sports, cooking food, and taking pictures which you can see below [click box]</p>
         
       </div>
 
       <div className="border-2 border-emerald-600 rounded xl:col-start-2 xl:col-end-9 xl:row-start-6 xl:row-end-12 flex flex-col div-seashell">
-          <h1 className="text-2xl text-emerald-700 flex justify-start mt-4 ml-8 font-mono font-bold ">my projects:</h1>
+          <h1 className="text-2xl text-emerald-700 flex justify-start mt-4 ml-3 xl:ml-7 font-mono font-bold ">my projects:</h1>
           <div className="grid grid-cols-1 gap-4 mt-4">
             <div className="mx-4 hover:border-2 hover:border-emerald-400 hover:rounded"><Link href="https://github.com/avashraj/personalsite">
-              <h1 className="pl-4 font-mono font-bold text-emerald-700">this website:</h1>
-              <p className="pl-4 font-mono text-emerald-600 ">[built with react, nextjs, tailwindcss and hosted through vercel]</p></Link>
+              <h1 className="xl:pl-4 font-mono font-bold text-emerald-700">this website:</h1>
+              <p className="xl:pl-4 font-mono text-emerald-600 ">[built with react, nextjs, tailwindcss and hosted through vercel]</p></Link>
             </div>
             <div className='mx-4'>
-              <h1 className='pl-4 font-mono font-bold text-emerald-700'>blip</h1>
+              <h1 className='xl:pl-4 font-mono font-bold text-emerald-700'>blip</h1>
               
-                <div className='pl-4 font-mono text-emerald-600'>
+                <div className='pl-4 font-mono text-emerald-600 xl:mb-0 mb-3'>
                   <Typewriter 
                   options={{
                     strings: ['[Currently building....]'],

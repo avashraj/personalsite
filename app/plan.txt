@@ -1,8 +1,17 @@
 what do i gotta do still:
 
-make it look good on mobile
 
-optimize website performence
+mobile view:
+    1st box right margin too big
+    about me left margin and bottom margin
+    projects bottom margin
+    [click photo]
+
+optimize website performence??
+    prolly find way to make pictures load faster
+    i think thats it
+
+
 
 split stuff into components
     main grid
@@ -10,11 +19,15 @@ split stuff into components
             typewriter
             socials
         second box
+            about me stuff
         third box
             projects
         4th box
             photoslides
             link to all photos(photogallery)
+
+
+make github look good for this project
 
 
 
