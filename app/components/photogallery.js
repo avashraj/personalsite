@@ -23,7 +23,7 @@ export default function PhotoGallery() {
     if (visibleCount < imageFilenames.length) {
       const timer = setTimeout(() => {
         setVisibleCount(visibleCount + 1);
-      }, 150); // Show next image every 1.5 seconds
+      }, 150); 
       return () => clearTimeout(timer);
     }
   }, [visibleCount, imageFilenames.length]);
@@ -51,8 +51,6 @@ export default function PhotoGallery() {
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 0; 
         }
-
-        /* Adjustments for mobile screens */
         @media (max-width: 768px) {
           .photos-container {
             grid-template-columns: 1fr;

@@ -13,14 +13,14 @@ const PhotoCarousel = ( {photoList} ) => {
     }, [photoList.length]);
 
     return (
-        <div className="flex justify-center items-center m-5"> {/* This centers the content and adds margin */}
+        <div className="flex justify-center items-center m-5"> 
           <Image
             src={`/photos/${photoList[currentIndex]}`}
             alt="Photo Carousel"
-            width={500} // Specify your desired width
-            height={300} // Specify your desired height
-             // This will maintain aspect ratio based on the width and height provided
-            className="object-center object-cover rounded-lg" // Add additional styling as needed
+            width={500} 
+            height={300} 
+             
+            className="object-center object-cover rounded-lg" 
           />
         </div>
       );

@@ -50,7 +50,7 @@ export default function Home() {
           <div className=''><SiTailwindcss color="#047857" size={35}/></div>
           <div className='animate-bounce'> <SiCplusplus color="#047857" size={35}/> </div>
         </div>
-        <p className="text-1xl text-emerald-600 flex justify-start font-mono ml-4 mt-3 mb-2 xl:mb-0">Other than code, I enjoy playing sports, cooking food, and taking pictures which you can see below [click box]</p>
+        <p className="text-1xl text-emerald-600 flex justify-start font-mono ml-4 mt-3 mb-2 xl:mb-0">Other than code, I enjoy playing sports, cooking food, and taking pictures which you can see below [click pic!]</p>
         
       </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
             <div className='mx-4'>
               <h1 className='xl:pl-4 font-mono font-bold text-emerald-700'>blip</h1>
               
-                <div className='pl-4 font-mono text-emerald-600 xl:mb-0 mb-3'>
+                <div className='xl:pl-4 font-mono text-emerald-600 xl:mb-0 mb-3'>
                   <Typewriter 
                   options={{
                     strings: ['[Currently building....]'],
