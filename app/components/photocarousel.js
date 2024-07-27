@@ -13,7 +13,7 @@ const PhotoCarousel = ( {photoList} ) => {
     }, [photoList.length]);
 
     return (
-        <div className="flex justify-center items-center m-5"> 
+        <div className="flex justify-center items-center m-1"> 
           <Image
             src={`/photos/${photoList[currentIndex]}`}
             alt="Photo Carousel"

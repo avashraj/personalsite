@@ -59,15 +59,19 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-4 mt-4">
             <div className="mx-4 hover:border-2 hover:border-emerald-400 hover:rounded"><Link href="https://github.com/avashraj/personalsite">
               <h1 className="xl:pl-4 font-mono font-bold text-emerald-700">this website:</h1>
-              <p className="xl:pl-4 font-mono text-emerald-600 ">[built with react, nextjs, tailwindcss and hosted through vercel]</p></Link>
+              <p className="xl:pl-4 font-mono text-emerald-600 ">built with react, nextjs, tailwindcss and hosted through vercel</p></Link>
+            </div>
+            <div className="mx-4 hover:border-2 hover:border-emerald-400 hover:rounded"><Link href="https://github.com/avashraj/blip">
+              <h1 className="xl:pl-4 font-mono font-bold text-emerald-700">blip: a way to find fun things near you!</h1>
+              <p className="xl:pl-4 font-mono text-emerald-600 ">built with expo, react native, with a firebase backend</p></Link>
             </div>
             <div className='mx-4'>
-              <h1 className='xl:pl-4 font-mono font-bold text-emerald-700'>blip</h1>
+              <h1 className='xl:pl-4 font-mono font-bold text-emerald-700'>LLNL Data Science Research</h1>
               
                 <div className='xl:pl-4 font-mono text-emerald-600 xl:mb-0 mb-3'>
                   <Typewriter 
                   options={{
-                    strings: ['[Currently building....]'],
+                    strings: ['[Currently at Lawrence Livermore Laboratory Researching]'],
                     autoStart: true,
                     loop: true,
                     delay: 100,
@@ -76,11 +80,12 @@ export default function Home() {
               
             </div>
           </div>
+          
         
       </div>
 
-      <div className="relative border-2 border-emerald-600 rounded xl:col-start-9 xl:col-end-12 xl:row-start-8 lg:row-end-12 flex justify-center items-center div-seashell">
-        <Link href="/photog"><PhotoCarousel className='m-3' photoList={photoList} /> </Link>       
+      <div className="relative rounded xl:col-start-9 xl:col-end-12 xl:row-start-8 xl:row-end-12 flex justify-center items-center">
+        <Link href="/photog"><PhotoCarousel className='m-1' photoList={photoList} /> </Link>       
       </div>
     </div>
   );
